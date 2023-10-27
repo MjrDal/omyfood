@@ -12,6 +12,10 @@ body {
   font-family: "Roboto";
 }
 
+.main__container {
+  margin-top: 500px;
+}
+
 h2 {
   font-family: "Roboto";
   color: Black;
@@ -227,6 +231,66 @@ footer .container__bas {
   font-weight: 400;
 }
 
+.main__loader {
+  width: 500px;
+  height: 500px;
+}
+
+.loader_container {
+  border-radius: 10px;
+  background-color: #F6F6F6;
+  width: 400px;
+  height: 400px;
+  margin: 100px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 7px solid transparent;
+  border-top-color: #9356DC;
+  animation: spin 2s 3 linear 500ms;
+}
+
+.loader::before, .loader::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 7px solid transparent;
+}
+
+.loader::before {
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-top-color: #FF79DA;
+  animation: spin 3s 2 linear 500ms;
+}
+
+.loader::after {
+  top: 28px;
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+  border-top-color: #99E2D0;
+  animation: spin 1.5s 3 linear 500ms;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .header__menu {
   display: flex;
   flex-direction: column;
