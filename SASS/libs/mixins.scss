@@ -1,0 +1,32 @@
+@mixin align_vertical{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin align_horizontal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin btn{
+    background: $color_btn;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@mixin box_shadow_10{
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 15px;
+}
+
+@mixin box_shadow_15{
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+}
