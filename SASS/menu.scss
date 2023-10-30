@@ -94,15 +94,19 @@
                 padding: 12px 0 40px 0;
                 gap: 12px;
                 .menu__card{
-                    padding: 15px;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
                     align-items: flex-end;
+                    position: relative;
+                    overflow: hidden;
                     background-color: white;
                     @include box_shadow_10;
                     animation: trans_menu_1 ease-in-out 1000ms both;
                     @include boucle;
+                    &:hover .card__price{
+                        animation: trans_coche ease-in-out 500ms both;
+                    }
                     h4{
                         font-size: 1.1rem;
                         font-weight: 500;
@@ -112,10 +116,39 @@
                         font-size: 0.938rem;
                         font-weight: 300;
                     }
-                    .card__price p{
-                        font-size: 0.938rem;
-                        font-weight: 700;
-                        color: #353535;
+                    .card__title{
+                        margin: 15px 0 15px 15px;
+                    }
+                    .card__price{
+                        display: flex;
+                        flex-direction: row;
+                        height: 100%;
+                        height: 72px;
+                        .price{
+                            font-size: 0.938rem;
+                            font-weight: 700;
+                            color: #353535;
+                            padding: 40px 15px 0 0;
+                        }
+                        .check{
+                            height: 75px;
+                            width: 60px;
+                            font-size: 1rem;
+                            position: absolute;
+                            right: -60px;
+                            bottom: 0.5px;
+                            background-color: $tertiaire;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            i{
+                                background-color: #F6F6F6;
+                                color: $tertiaire;
+                                padding: 5px;
+                                border-radius: 15px;
+                            }
+                        }
                     }
                 }
                 .menu__card__laNoteEnchantée{
@@ -169,6 +202,6 @@
         transform: translateX(0px);
     }
     100%{
-        transform: translateX(-20px);
+        transform: translateX(-60px);
     }
 }
