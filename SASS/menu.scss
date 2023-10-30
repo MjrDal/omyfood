@@ -101,6 +101,8 @@
                     align-items: flex-end;
                     background-color: white;
                     @include box_shadow_10;
+                    animation: trans_menu_1 ease-in-out 1000ms both;
+                    @include boucle;
                     h4{
                         font-size: 1.1rem;
                         font-weight: 500;
@@ -115,6 +117,10 @@
                         font-weight: 700;
                         color: #353535;
                     }
+                }
+                .menu__card__laNoteEnchantée{
+                    animation: trans_menu_1 ease-in-out 1000ms both;
+                    @include boucle($nbr_menu:10);
                 }
             }
             
@@ -141,5 +147,28 @@
             }
         }
         
+    }
+}
+
+
+// animation menu
+
+@keyframes trans_menu_1{
+    0%{
+        transform: translateX(-500px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+// animation coche de validation
+
+@keyframes trans_coche{
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(-20px);
     }
 }

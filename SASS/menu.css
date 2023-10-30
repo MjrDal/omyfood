@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap");
@@ -475,6 +476,34 @@ footer .container__bas {
   background-color: white;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  animation: trans_menu_1 ease-in-out 1000ms both;
+}
+.menu .menu__container .plat .menu__cards .menu__card--1 {
+  animation-delay: 1s;
+}
+.menu .menu__container .plat .menu__cards .menu__card--2 {
+  animation-delay: 2s;
+}
+.menu .menu__container .plat .menu__cards .menu__card--3 {
+  animation-delay: 3s;
+}
+.menu .menu__container .plat .menu__cards .menu__card--4 {
+  animation-delay: 4s;
+}
+.menu .menu__container .plat .menu__cards .menu__card--5 {
+  animation-delay: 5s;
+}
+.menu .menu__container .plat .menu__cards .menu__card--6 {
+  animation-delay: 6s;
+}
+.menu .menu__container .plat .menu__cards .menu__card--7 {
+  animation-delay: 7s;
+}
+.menu .menu__container .plat .menu__cards .menu__card--8 {
+  animation-delay: 8s;
+}
+.menu .menu__container .plat .menu__cards .menu__card--9 {
+  animation-delay: 9s;
 }
 .menu .menu__container .plat .menu__cards .menu__card h4 {
   font-size: 1.1rem;
@@ -489,6 +518,39 @@ footer .container__bas {
   font-size: 0.938rem;
   font-weight: 700;
   color: #353535;
+}
+.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée {
+  animation: trans_menu_1 ease-in-out 1000ms both;
+}
+.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--1 {
+  animation-delay: 1s;
+}
+.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--2 {
+  animation-delay: 2s;
+}
+.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--3 {
+  animation-delay: 3s;
+}
+.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--4 {
+  animation-delay: 4s;
+}
+.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--5 {
+  animation-delay: 5s;
+}
+.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--6 {
+  animation-delay: 6s;
+}
+.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--7 {
+  animation-delay: 7s;
+}
+.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--8 {
+  animation-delay: 8s;
+}
+.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--9 {
+  animation-delay: 9s;
+}
+.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--10 {
+  animation-delay: 10s;
 }
 .menu .menu__container .menu__commande {
   display: flex;
@@ -514,4 +576,21 @@ footer .container__bas {
 }
 .menu .menu__container .menu__commande .btn:hover p {
   animation: btn_txt ease-in-out 1000ms forwards;
+}
+
+@keyframes trans_menu_1 {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes trans_coche {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
 }/*# sourceMappingURL=menu.css.map */

@@ -1,3 +1,5 @@
+// mxin pour l'alignement 
+
 @mixin align_vertical{
     display: flex;
     flex-direction: column;
@@ -11,6 +13,8 @@
     justify-content: center;
 }
 
+// mixin pour les boutons
+
 @mixin btn{
     background: $color_btn;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
@@ -18,6 +22,8 @@
     border: none;
     border-radius: 25px;
 }
+
+// mixin pour le shadow des div
 
 @mixin box_shadow_10{
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
@@ -27,4 +33,14 @@
 @mixin box_shadow_15{
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
+}
+
+// mixin pour l'animation des menus
+
+@mixin boucle($nbr_menu:9){
+    @for $i from 1 through $nbr_menu{
+        &--#{$i}{
+            animation-delay: 1s * $i;
+        }
+    }
 }
