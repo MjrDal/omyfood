@@ -99,9 +99,6 @@ a {
 .exploration .exploration__restaurants .btn:hover {
   animation: btn_hover ease-in-out 1000ms forwards;
 }
-.exploration .exploration__restaurants .btn:hover p {
-  animation: btn_txt ease-in-out 1000ms forwards;
-}
 
 .fonctionnement {
   padding: 48px 20px 68px 20px;
@@ -362,13 +359,5 @@ footer .container__bas {
   }
   100% {
     opacity: 1;
-  }
-}
-@keyframes btn_txt {
-  0% {
-    transform: translate(1px, 1px);
-  }
-  100% {
-    transform: translate(0, 0);
   }
 }/*# sourceMappingURL=style.css.map */

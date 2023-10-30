@@ -109,9 +109,6 @@ a {
             &:hover{
                 animation: btn_hover ease-in-out 1000ms forwards;
             }
-            &:hover p{
-                animation: btn_txt ease-in-out 1000ms forwards;
-            }
         }
     }
 }
@@ -272,7 +269,6 @@ footer{
 
 .loader_container{
     border-radius: 10px;
-    // background-color: #F6F6F6;
     width: 375px;
     height: 375px;
     margin: 100px auto 0;
@@ -393,11 +389,3 @@ footer{
     }
 }
 
-@keyframes btn_txt{
-    0%{
-        transform: translate(1px, 1px);
-    }
-    100%{
-        transform: translate(0, 0);
-    }
-}

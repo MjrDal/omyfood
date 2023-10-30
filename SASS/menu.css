@@ -102,9 +102,6 @@ a {
 .exploration .exploration__restaurants .btn:hover {
   animation: btn_hover ease-in-out 1000ms forwards;
 }
-.exploration .exploration__restaurants .btn:hover p {
-  animation: btn_txt ease-in-out 1000ms forwards;
-}
 
 .fonctionnement {
   padding: 48px 20px 68px 20px;
@@ -367,14 +364,6 @@ footer .container__bas {
     opacity: 1;
   }
 }
-@keyframes btn_txt {
-  0% {
-    transform: translate(1px, 1px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
 .header__menu {
   display: flex;
   flex-direction: column;
@@ -605,9 +594,6 @@ footer .container__bas {
 }
 .menu .menu__container .menu__commande .btn:hover {
   animation: btn_hover ease-in-out 1000ms forwards;
-}
-.menu .menu__container .menu__commande .btn:hover p {
-  animation: btn_txt ease-in-out 1000ms forwards;
 }
 
 @keyframes trans_menu_1 {
