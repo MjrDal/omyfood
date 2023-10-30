@@ -81,7 +81,6 @@ a {
   text-align: center;
   font-size: 1.1rem;
   font-weight: 300;
-  padding-bottom: 27px;
 }
 .exploration .exploration__restaurants .btn {
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -89,10 +88,21 @@ a {
   color: white;
   border: none;
   border-radius: 25px;
-  font-size: 1rem;
-  font-weight: 500;
   width: 218px;
   height: 50px;
+  margin-top: 27px;
+  transition: background-color 250ms;
+  animation: btn_reset ease-in-out 1000ms forwards;
+}
+.exploration .exploration__restaurants .btn p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.exploration .exploration__restaurants .btn:hover {
+  animation: btn_hover ease-in-out 1000ms forwards;
+}
+.exploration .exploration__restaurants .btn:hover p {
+  animation: btn_txt ease-in-out 1000ms forwards;
 }
 
 .fonctionnement {
@@ -329,6 +339,41 @@ footer .container__bas {
     color: transparent;
   }
 }
+@keyframes heart__opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes btn_hover {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@keyframes btn_reset {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes btn_txt {
+  0% {
+    transform: translate(1px, 1px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 .header__menu {
   display: flex;
   flex-direction: column;
@@ -455,8 +500,18 @@ footer .container__bas {
   color: white;
   border: none;
   border-radius: 25px;
-  font-size: 1rem;
-  font-weight: 500;
   width: 186px;
   height: 50px;
+  transition: background-color 250ms;
+  animation: btn_reset ease-in-out 1000ms forwards;
+}
+.menu .menu__container .menu__commande .btn p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.menu .menu__container .menu__commande .btn:hover {
+  animation: btn_hover ease-in-out 1000ms forwards;
+}
+.menu .menu__container .menu__commande .btn:hover p {
+  animation: btn_txt ease-in-out 1000ms forwards;
 }/*# sourceMappingURL=menu.css.map */

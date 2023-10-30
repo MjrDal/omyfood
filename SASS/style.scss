@@ -57,6 +57,7 @@ a {
     text-decoration: none;
 }
 
+
 // Header
 
 .header__index{
@@ -93,13 +94,24 @@ a {
             text-align: center;
             font-size: 1.1rem;
             font-weight: 300;
-            padding-bottom: 27px;
-
         }
         .btn{
             @include btn;
             width: 218px;
             height: 50px;
+            margin-top: 27px;
+            transition: background-color 250ms;
+            animation: btn_reset ease-in-out 1000ms forwards; 
+            p{
+                font-size: 1rem;
+                font-weight: 500;
+            }   
+            &:hover{
+                animation: btn_hover ease-in-out 1000ms forwards;
+            }
+            &:hover p{
+                animation: btn_txt ease-in-out 1000ms forwards;
+            }
         }
     }
 }
@@ -358,5 +370,34 @@ footer{
     }
     100%{
         opacity: 0;
+    }
+}
+
+// *************************boutton**********************
+
+@keyframes btn_hover {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.5;
+    }
+}
+
+@keyframes btn_reset {
+    0%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes btn_txt{
+    0%{
+        transform: translate(1px, 1px);
+    }
+    100%{
+        transform: translate(0, 0);
     }
 }
