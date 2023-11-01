@@ -198,6 +198,9 @@ a {
 .restaurants .restaurants__cards .card .card__favorit .fa-solid:hover {
   animation: heart 1s ease-in-out 100ms both;
 }
+.restaurants .restaurants__cards .card .card__favorit .fa-solid:hover .fa-regular {
+  animation: heart__empty 1s ease-in-out 100ms both;
+}
 .restaurants .restaurants__cards .card .card__new {
   width: 80px;
   background-color: #99E2D0;
@@ -337,7 +340,7 @@ footer .container__bas {
     color: transparent;
   }
 }
-@keyframes heart__opacity {
+@keyframes heart__empty {
   0% {
     opacity: 1;
   }
@@ -424,6 +427,9 @@ footer .container__bas {
 .menu .menu__container .menu__title .menu__title__favorit {
   display: flex;
 }
+.menu .menu__container .menu__title .menu__title__favorit:hover .fa-regular {
+  animation: heart__empty 500ms ease-in-out 100ms both;
+}
 .menu .menu__container .menu__title .menu__title__favorit .fa-regular {
   font-size: 1.8rem;
   position: absolute;
@@ -508,7 +514,16 @@ footer .container__bas {
   font-weight: 300;
 }
 .menu .menu__container .plat .menu__cards .menu__card .card__title {
+  width: 100%;
   margin: 15px 0 15px 15px;
+  background-color: aqua;
+}
+.menu .menu__container .plat .menu__cards .menu__card .card__title p {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: yellow;
 }
 .menu .menu__container .plat .menu__cards .menu__card .card__price {
   display: flex;

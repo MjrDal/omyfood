@@ -183,6 +183,9 @@ a {
   bottom: 33px;
   right: 25px;
 }
+.restaurants .restaurants__cards .card .card__favorit:hover .fa-regular {
+  animation: heart__empty 500ms ease-in-out 100ms both;
+}
 .restaurants .restaurants__cards .card .card__favorit .fa-regular {
   font-size: 1.375rem;
   position: absolute;
@@ -194,6 +197,9 @@ a {
 }
 .restaurants .restaurants__cards .card .card__favorit .fa-solid:hover {
   animation: heart 1s ease-in-out 100ms both;
+}
+.restaurants .restaurants__cards .card .card__favorit .fa-solid:hover .fa-regular {
+  animation: heart__empty 1s ease-in-out 100ms both;
 }
 .restaurants .restaurants__cards .card .card__new {
   width: 80px;
@@ -334,7 +340,7 @@ footer .container__bas {
     color: transparent;
   }
 }
-@keyframes heart__opacity {
+@keyframes heart__empty {
   0% {
     opacity: 1;
   }
