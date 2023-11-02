@@ -9,7 +9,7 @@
 $primaire:#9356DC;
 $secondaire: #FF79DA;
 $tertiaire: #99E2D0;
-$color_btn: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+$color_btn: linear-gradient(345deg, #9356DC -11.44%, #FF79DA 123.93%);
 $font_size_title_h2: 1.5rem;
 $font_size_title_h3: 1.1rem;
 $font_weight_title_h2: 700;
@@ -22,19 +22,19 @@ $color_h3: Black;
 *{
     margin: 0;
     padding: 0;
-
 }
 
 
 body{
-    width: 375px;
     font-family: 'Roboto';
+    display: flex;
+    justify-content: center;
 }
 
 .main__container{
     position: absolute;
     top: 0;
-    width: 375px;
+    width: 100%;
     animation: main__container linear 5000ms 1000ms both;
 }
 
@@ -77,7 +77,8 @@ a {
         font-weight: 500;
     }
     i{
-        font-size: 30px;
+        font-size: 1rem;
+        color: #353535;
     }
 }
 
@@ -114,7 +115,6 @@ a {
 }
 
 .fonctionnement{
-    padding: 48px 20px 68px 20px;
     .fonctionnement__title{
         padding-bottom: 26px;
     }
@@ -146,97 +146,101 @@ a {
             font-size: 1rem;
             font-weight: 500;
             color: black;
-            .fa-solid{
+            .color__gris{
                 color: #7E7E7E;
+            }
+            .color__violet{
+                color: #9356DC;
             } 
         }
+        
     }
 }
 
 .restaurants{
     background-color: #F6F6F6;
-    padding: 54px 18px 66px 18px;
     .restarants__title{
         margin-bottom:20px;
         padding-left: 3px;
     }
     .restaurants__cards{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 18px;
-        .card{
-            width: 340px;
-            height: 251px;
-            background-color: white;
-            @include box_shadow_10;
-
-            img{
+        width: 100%;
+        a{
+            width: 100%;
+            display: block;
+            margin-bottom: 18px;
+            .card{
                 width: 100%;
-                height: 174px;
-                border-radius: 15px 15px 0 0;
-                object-fit: cover;
-            }
-            .card__txt{
-                padding: 16px 0 0 16px;
-                .card__subtitle{
-                    font-size: 1.063rem;
-                    font-weight: 300;
-                }
-            }
-            .card__favorit{
-                display: flex;
-                justify-content: end;
-                position: relative;
-                bottom: 33px;
-                right: 25px;
-                &:hover .fa-regular{
-                    animation: heart__empty 500ms ease-in-out 100ms both;
-                }
-                .fa-regular{
-                    font-size: 1.375rem;
-                    position: absolute;
-                }
-                .fa-solid{
-                    font-size: 1.375rem;
-                    opacity: 0;
-                    background: $color_btn;
-                    &:hover{
-                        animation: heart 1s ease-in-out 100ms both;
-                    }
-                    &:hover .fa-regular{
-                        animation: heart__empty 1s ease-in-out 100ms both;
-                    }
-                }
+                height: 251px;
+                background-color: white;
+                @include box_shadow_10;
                 
-            }
-            .card__new{
-                width: 80px;
-                background-color: $tertiaire;
-                display: flex;
-                justify-content: center;
-                padding: 7px 0 7px 0;
-                position: relative;
-                left: 70%;
-                bottom: 95%;
-                border-radius: 2px;
-                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-                p{
-                    font-size: 0.9rem;
-                    font-weight: 500;
-                    color: #008766;
+                img{
+                    width: 100%;
+                    height: 174px;
+                    border-radius: 15px 15px 0 0;
+                    object-fit: cover;
+                }
+                .card__txt{
+                    padding: 16px 0 0 16px;
+                    .card__subtitle{
+                        font-size: 1.063rem;
+                        font-weight: 300;
+                    }
+                }
+                .card__favorit{
+                    display: flex;
+                    justify-content: end;
+                    position: relative;
+                    bottom: 33px;
+                    right: 25px;
+                    &:hover .fa-regular{
+                        animation: heart__empty 500ms ease-in-out 100ms both;
+                    }
+                    .fa-regular{
+                        font-size: 1.375rem;
+                        position: absolute;
+                    }
+                    .fa-solid{
+                        font-size: 1.375rem;
+                        opacity: 0;
+                        background: $color_btn;
+                        &:hover{
+                            animation: heart 1s ease-in-out 100ms both;
+                        }
+                        &:hover .fa-regular{
+                            animation: heart__empty 1s ease-in-out 100ms both;
+                        }
+                    }
+                    
+                }
+                .card__new{
+                    width: 80px;
+                    background-color: $tertiaire;
+                    display: flex;
+                    justify-content: center;
+                    padding: 7px 0 7px 0;
+                    position: relative;
+                    left: 70%;
+                    bottom: 95%;
+                    border-radius: 2px;
+                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+                    p{
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        color: #008766;
+                    }
                 }
             }
         }
+        
     }
 }
 
 footer{
     background-color: #353535;
-    padding: 22px 25px 22px 25px;
     .footer__logo{
-        padding-bottom: 16px;
+
         .footer__logo__title{
             font-size: 18px;
             font-weight: 400;
