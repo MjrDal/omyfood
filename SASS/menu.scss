@@ -5,6 +5,11 @@
 @import "style.scss";
 
 
+.main__container__menu{
+    width: 375px;
+    max-width: 1440px;
+}
+
 .header__menu{
     display: flex;
     flex-direction: column;
@@ -110,6 +115,9 @@
                     &:hover .card__price{
                         animation: trans_coche ease-in-out 500ms both;
                     }
+                    &:hover .card__title{
+                        width: 60%;
+                    }
                     h4{
                         font-size: 1.1rem;
                         font-weight: 500;
@@ -122,13 +130,17 @@
                     .card__title{
                         width: 100%;
                         margin: 15px 0 15px 15px;
-                        background-color: aqua;
+                        h4{
+                            width: 100%;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
                         p{
                             width: 100%;
                             overflow: hidden;
                             white-space: nowrap;
                             text-overflow: ellipsis;
-                            background-color: yellow;
                         }
                     }
                     .card__price{
