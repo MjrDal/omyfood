@@ -252,6 +252,7 @@ a {
   background-color: white;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  position: relative;
 }
 .restaurants .restaurants__cards a .card img {
   width: 100%;
@@ -292,19 +293,23 @@ a {
 .restaurants .restaurants__cards a .card .card__favorit .fa-solid:hover .fa-regular {
   animation: heart__empty 1s ease-in-out 100ms both;
 }
-.restaurants .restaurants__cards a .card .card__new {
+.restaurants .restaurants__cards a .card .card__new__position {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.restaurants .restaurants__cards a .card .card__new__position .card__new {
   width: 80px;
   background-color: #99E2D0;
   display: flex;
   justify-content: center;
+  margin: 13px 17px 0 0;
   padding: 7px 0 7px 0;
-  position: relative;
-  left: 70%;
-  bottom: 95%;
   border-radius: 2px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
-.restaurants .restaurants__cards a .card .card__new p {
+.restaurants .restaurants__cards a .card .card__new__position .card__new p {
   font-size: 0.9rem;
   font-weight: 500;
   color: #008766;
