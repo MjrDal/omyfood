@@ -1,11 +1,28 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @media (min-width: 375px) {
   .main__container {
     max-width: 1440px;
+  }
+}
+@media (min-width: 634px) {
+  .main__container__menu .menu__container__background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__container__menu .menu__container__background .menu__container {
+    width: 634px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__container__menu .menu__container__background .menu__container .plat {
+    width: 100%;
+  }
+  .footer {
+    width: 100%;
   }
 }
 @media (max-width: 780px) {
@@ -91,94 +108,13 @@
   .restaurants .restaurants__containner {
     width: 1080px;
   }
-}
-@media (min-width: 375px) {
-  .main__container {
-    max-width: 1440px;
-  }
-}
-@media (max-width: 780px) {
-  .fonctionnement {
-    padding: 48px 20px 68px 20px;
-  }
-  .restaurants {
-    padding: 54px 18px 66px 18px;
-  }
-  footer {
-    padding: 22px 25px 22px 25px;
-  }
-  footer .footer__logo {
-    padding-bottom: 16px;
-  }
-}
-@media (min-width: 780px) {
-  .fonctionnement {
-    padding: 48px 20px 50px 20px;
-  }
-  .restaurants {
-    padding: 30px 18px 10px 18px;
-  }
-  .restaurants .restaurants__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 30px;
-    -moz-column-gap: 100px;
-         column-gap: 100px;
-  }
-  .restaurants .restaurants__cards a {
-    width: 490px;
-  }
-  footer {
+  .bg__La_palette_du_gout {
     display: flex;
-    flex-direction: row-reverse;
-    padding: 60px 60px 30px 0;
+    flex-direction: column;
+    align-items: center;
   }
-  footer .footer__logo {
-    margin-left: 70px;
-  }
-  footer .footer__container {
-    display: flex;
-    flex-direction: row;
-  }
-  footer .footer__container .container__haut {
-    display: flex;
-    flex-direction: row;
-  }
-  footer .footer__container .container__haut i {
-    padding-left: 10px;
-  }
-  footer .footer__container .container__bas {
-    display: flex;
-    flex-direction: row;
-    margin-left: 50px;
-  }
-  footer .footer__container .container__bas a {
-    padding-left: 10px;
-  }
-}
-@media (min-width: 1080px) {
-  .fonctionnement {
-    display: flex;
-    justify-content: center;
-    padding: 48px 20px 50px 20px;
-  }
-  .fonctionnement .fonctionnement__containner {
-    width: 1080px;
-  }
-  .fonctionnement .fonctionnement__containner .fonctionnement__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .fonctionnement .fonctionnement__containner .fonctionnement__list .fonctionnement__explication {
-    width: 320px;
-  }
-  .restaurants {
-    display: flex;
-    justify-content: center;
-  }
-  .restaurants .restaurants__containner {
-    width: 1080px;
+  .bg__La_palette_du_gout .menu__container__background {
+    width: 100%;
   }
 }
 * {
@@ -186,368 +122,16 @@
   padding: 0;
 }
 
-body {
+.body__menu {
   font-family: "Roboto";
   display: flex;
-  justify-content: center;
-}
-
-.main__container {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  animation: main__container linear 5000ms 1000ms both;
-}
-
-h2 {
-  font-family: "Roboto";
-  color: Black;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-h3 {
-  font-family: "Roboto";
-  color: Black;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.header__index {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-}
-.header__index .logo {
-  height: 36px;
-  padding-top: 14px;
-  padding-bottom: 13px;
-}
-.header__index .localisation {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 50px;
-  background-color: #EAEAEA;
-  gap: 17px;
-  font-size: 1rem;
-  font-weight: 500;
-}
-.header__index i {
-  font-size: 1rem;
-  color: #353535;
-}
-
-.exploration {
-  padding: 39px 0 57px 0;
-  background-color: #F6F6F6;
-}
-.exploration .exploration__restaurants {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.exploration .exploration__restaurants h2 {
-  text-align: center;
-  padding-bottom: 15px;
-}
-.exploration .exploration__restaurants p {
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 300;
-}
-.exploration .exploration__restaurants .btn {
-  background: linear-gradient(345deg, #9356DC -11.44%, #FF79DA 123.93%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  color: white;
-  border: none;
-  border-radius: 25px;
-  width: 218px;
-  height: 50px;
-  margin-top: 27px;
-  transition: background-color 250ms;
-  animation: btn_reset ease-in-out 1000ms forwards;
-}
-.exploration .exploration__restaurants .btn p {
-  font-size: 1rem;
-  font-weight: 500;
-}
-.exploration .exploration__restaurants .btn:hover {
-  animation: btn_hover ease-in-out 1000ms forwards;
-}
-
-.fonctionnement .fonctionnement__title {
-  padding-bottom: 26px;
-}
-.fonctionnement .fonctionnement__explication {
-  display: flex;
-  flex-direction: row;
-  border-radius: 20px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  margin-bottom: 25px;
-  margin-left: 12px;
-  padding: 25px 0 25px 0;
-  background-color: #F6F6F6;
-}
-.fonctionnement .fonctionnement__explication .nbr {
-  width: 24px;
-  height: 24px;
-  background-color: #9356DC;
-  color: white;
-  border-radius: 12px;
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  position: relative;
-  left: -12px;
-}
-.fonctionnement .fonctionnement__explication .txt {
-  display: flex;
-  flex-direction: row;
-  gap: 27px;
-  font-size: 1rem;
-  font-weight: 500;
-  color: black;
-}
-.fonctionnement .fonctionnement__explication .txt .color__gris {
-  color: #7E7E7E;
-}
-.fonctionnement .fonctionnement__explication .txt .color__violet {
-  color: #9356DC;
-}
-
-.restaurants {
-  background-color: #F6F6F6;
-}
-.restaurants .restarants__title {
-  margin-bottom: 20px;
-  padding-left: 3px;
-}
-.restaurants .restaurants__cards {
-  width: 100%;
-}
-.restaurants .restaurants__cards a {
-  width: 100%;
-  display: block;
-  margin-bottom: 18px;
-}
-.restaurants .restaurants__cards a .card {
-  width: 100%;
-  height: 251px;
-  background-color: white;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-}
-.restaurants .restaurants__cards a .card img {
-  width: 100%;
-  height: 174px;
-  border-radius: 15px 15px 0 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.restaurants .restaurants__cards a .card .card__txt {
-  padding: 16px 0 0 16px;
-}
-.restaurants .restaurants__cards a .card .card__txt .card__subtitle {
-  font-size: 1.063rem;
-  font-weight: 300;
-}
-.restaurants .restaurants__cards a .card .card__favorit {
-  display: flex;
-  justify-content: end;
-  position: relative;
-  bottom: 33px;
-  right: 25px;
-}
-.restaurants .restaurants__cards a .card .card__favorit:hover .fa-regular {
-  animation: heart__empty 500ms ease-in-out 100ms both;
-}
-.restaurants .restaurants__cards a .card .card__favorit .fa-regular {
-  font-size: 1.375rem;
-  position: absolute;
-}
-.restaurants .restaurants__cards a .card .card__favorit .fa-solid {
-  font-size: 1.375rem;
-  opacity: 0;
-  background: linear-gradient(345deg, #9356DC -11.44%, #FF79DA 123.93%);
-}
-.restaurants .restaurants__cards a .card .card__favorit .fa-solid:hover {
-  animation: heart 1s ease-in-out 100ms both;
-}
-.restaurants .restaurants__cards a .card .card__favorit .fa-solid:hover .fa-regular {
-  animation: heart__empty 1s ease-in-out 100ms both;
-}
-.restaurants .restaurants__cards a .card .card__new {
-  width: 80px;
-  background-color: #99E2D0;
-  display: flex;
-  justify-content: center;
-  padding: 7px 0 7px 0;
-  position: relative;
-  top: 5px;
-  right: 30px;
-  border-radius: 2px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-}
-.restaurants .restaurants__cards a .card .card__new p {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #008766;
-}
-
-footer {
-  background-color: #353535;
-}
-footer .footer__logo .footer__logo__title {
-  font-size: 18px;
-  font-weight: 400;
-  font-family: "Shrikhand";
-  color: white;
-}
-footer .container__haut {
-  color: white;
-  font-size: 1rem;
-  font-weight: 500;
-  padding-bottom: 7px;
-}
-footer .container__haut i {
-  width: 16px;
-  font-size: 1rem;
-}
-footer .container__haut a {
-  padding-left: 11px;
-}
-footer .container__bas {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  color: white;
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.main__loader {
-  width: 100%;
-}
-
-.loader_container {
-  border-radius: 10px;
-  width: 375px;
-  height: 375px;
-  margin: 100px auto 0;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.loader {
-  display: block;
-  position: relative;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 7px solid transparent;
-  border-top-color: #9356DC;
-  animation: spin 2s 3 linear 500ms;
-}
-
-.loader::before, .loader::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  border: 7px solid transparent;
-}
-
-.loader::before {
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  border-top-color: #FF79DA;
-  animation: spin 3s 2 linear 500ms;
-}
-
-.loader::after {
-  top: 28px;
-  left: 28px;
-  right: 28px;
-  bottom: 28px;
-  border-top-color: #99E2D0;
-  animation: spin 1.5s 3 linear 500ms;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes main__container {
-  0% {
-    transform: translateX(-999999px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes heart {
-  0% {
-    opacity: 0;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-  50% {
-    opacity: 0.5;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-  100% {
-    opacity: 1;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-}
-@keyframes heart__empty {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes btn_hover {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.5;
-  }
-}
-@keyframes btn_reset {
-  0% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .main__container__menu {
-  width: 375px;
+  width: 100%;
   max-width: 1440px;
 }
 
@@ -566,87 +150,97 @@ footer .container__bas {
 }
 
 .bg__La_palette_du_gout {
-  background-image: url("../assets/Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-  background-size: 100%;
+  background-image: url("../assets/Images et textes Ohmyfood/images/restaurants/N_Y88TWmGwA.svg");
+  background-size: 100% 290px;
+  background-position: top right 50%;
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 .bg__Le_delice_des_sens {
   background-image: url("../assets/Images et textes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 .bg__La_note_enchantee {
   background-image: url("../assets/Images et textes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 .bg__A_la_francaise {
   background-image: url("../assets/Images et textes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 .menu {
   padding-top: 220px;
 }
-.menu .menu__container {
+.menu .menu__container__background {
+  max-width: 1055px;
   background-color: #F6F6F6;
   border-radius: 40px 40px 0 0;
   padding: 32px 17px 40px 17px;
+  overflow: hidden;
 }
-.menu .menu__container .menu__title {
+.menu .menu__container__background .menu__container .menu__title {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 24px;
 }
-.menu .menu__container .menu__title h2 {
+.menu .menu__container__background .menu__container .menu__title h2 {
   font-size: 1.8rem;
   font-family: "Shrikhand";
   font-weight: 400;
 }
-.menu .menu__container .menu__title .menu__title__favorit {
+.menu .menu__container__background .menu__container .menu__title .menu__title__favorit {
   display: flex;
 }
-.menu .menu__container .menu__title .menu__title__favorit:hover .fa-regular {
+.menu .menu__container__background .menu__container .menu__title .menu__title__favorit:hover .fa-regular {
   animation: heart__empty 500ms ease-in-out 100ms both;
 }
-.menu .menu__container .menu__title .menu__title__favorit .fa-regular {
+.menu .menu__container__background .menu__container .menu__title .menu__title__favorit:hover .fa-solid {
+  animation: heart 500ms ease-in-out 100ms both;
+}
+.menu .menu__container__background .menu__container .menu__title .menu__title__favorit .fa-regular {
   font-size: 1.8rem;
   position: absolute;
 }
-.menu .menu__container .menu__title .menu__title__favorit .fa-solid {
+.menu .menu__container__background .menu__container .menu__title .menu__title__favorit .fa-solid {
   font-size: 1.8rem;
   opacity: 0;
   background: linear-gradient(345deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
-.menu .menu__container .menu__title .menu__title__favorit .fa-solid:hover {
-  animation: heart 1s ease-in-out 100ms both;
-}
-.menu .menu__container .plat {
+.menu .menu__container__background .menu__container .plat {
   padding-top: 40px;
 }
-.menu .menu__container .plat h3 {
+.menu .menu__container__background .menu__container .plat h3 {
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
 }
-.menu .menu__container .plat .lign__green {
+.menu .menu__container__background .menu__container .plat .lign__green {
   width: 40px;
   height: 3px;
   background-color: #99E2D0;
   margin-top: 3px;
 }
-.menu .menu__container .plat .menu__cards {
+.menu .menu__container__background .menu__container .plat .menu__cards {
   display: flex;
   flex-direction: column;
   padding: 12px 0 40px 0;
   gap: 12px;
 }
-.menu .menu__container .plat .menu__cards .menu__card {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -658,77 +252,77 @@ footer .container__bas {
   border-radius: 15px;
   animation: trans_menu_1 ease-in-out 1000ms both;
 }
-.menu .menu__container .plat .menu__cards .menu__card--1 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card--1 {
   animation-delay: 1s;
 }
-.menu .menu__container .plat .menu__cards .menu__card--2 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card--2 {
   animation-delay: 2s;
 }
-.menu .menu__container .plat .menu__cards .menu__card--3 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card--3 {
   animation-delay: 3s;
 }
-.menu .menu__container .plat .menu__cards .menu__card--4 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card--4 {
   animation-delay: 4s;
 }
-.menu .menu__container .plat .menu__cards .menu__card--5 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card--5 {
   animation-delay: 5s;
 }
-.menu .menu__container .plat .menu__cards .menu__card--6 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card--6 {
   animation-delay: 6s;
 }
-.menu .menu__container .plat .menu__cards .menu__card--7 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card--7 {
   animation-delay: 7s;
 }
-.menu .menu__container .plat .menu__cards .menu__card--8 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card--8 {
   animation-delay: 8s;
 }
-.menu .menu__container .plat .menu__cards .menu__card--9 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card--9 {
   animation-delay: 9s;
 }
-.menu .menu__container .plat .menu__cards .menu__card:hover .card__price {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card:hover .card__price {
   animation: trans_coche ease-in-out 500ms both;
 }
-.menu .menu__container .plat .menu__cards .menu__card:hover .card__title {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card:hover .card__title {
   width: 60%;
 }
-.menu .menu__container .plat .menu__cards .menu__card h4 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card h4 {
   font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 5px;
 }
-.menu .menu__container .plat .menu__cards .menu__card p {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card p {
   font-size: 0.938rem;
   font-weight: 300;
 }
-.menu .menu__container .plat .menu__cards .menu__card .card__title {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card .card__title {
   width: 100%;
   margin: 15px 0 15px 15px;
 }
-.menu .menu__container .plat .menu__cards .menu__card .card__title h4 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card .card__title h4 {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu .menu__container .plat .menu__cards .menu__card .card__title p {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card .card__title p {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu .menu__container .plat .menu__cards .menu__card .card__price {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card .card__price {
   display: flex;
   flex-direction: row;
   height: 100%;
   height: 72px;
 }
-.menu .menu__container .plat .menu__cards .menu__card .card__price .price {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card .card__price .price {
   font-size: 0.938rem;
   font-weight: 700;
   color: #353535;
   padding: 40px 15px 0 0;
 }
-.menu .menu__container .plat .menu__cards .menu__card .card__price .check {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card .card__price .check {
   height: 75px;
   width: 60px;
   font-size: 1rem;
@@ -740,50 +334,50 @@ footer .container__bas {
   justify-content: center;
   align-items: center;
 }
-.menu .menu__container .plat .menu__cards .menu__card .card__price .check i {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card .card__price .check i {
   background-color: #F6F6F6;
   color: #99E2D0;
   padding: 5px;
   border-radius: 15px;
 }
-.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card__laNoteEnchantée {
   animation: trans_menu_1 ease-in-out 1000ms both;
 }
-.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--1 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--1 {
   animation-delay: 1s;
 }
-.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--2 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--2 {
   animation-delay: 2s;
 }
-.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--3 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--3 {
   animation-delay: 3s;
 }
-.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--4 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--4 {
   animation-delay: 4s;
 }
-.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--5 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--5 {
   animation-delay: 5s;
 }
-.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--6 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--6 {
   animation-delay: 6s;
 }
-.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--7 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--7 {
   animation-delay: 7s;
 }
-.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--8 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--8 {
   animation-delay: 8s;
 }
-.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--9 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--9 {
   animation-delay: 9s;
 }
-.menu .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--10 {
+.menu .menu__container__background .menu__container .plat .menu__cards .menu__card__laNoteEnchantée--10 {
   animation-delay: 10s;
 }
-.menu .menu__container .menu__commande {
+.menu .menu__container__background .menu__container .menu__commande {
   display: flex;
   justify-content: center;
 }
-.menu .menu__container .menu__commande .btn {
+.menu .menu__container__background .menu__container .menu__commande .btn {
   background: linear-gradient(345deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   color: white;
@@ -794,17 +388,17 @@ footer .container__bas {
   transition: background-color 250ms;
   animation: btn_reset ease-in-out 1000ms forwards;
 }
-.menu .menu__container .menu__commande .btn p {
+.menu .menu__container__background .menu__container .menu__commande .btn p {
   font-size: 1rem;
   font-weight: 500;
 }
-.menu .menu__container .menu__commande .btn:hover {
+.menu .menu__container__background .menu__container .menu__commande .btn:hover {
   animation: btn_hover ease-in-out 1000ms forwards;
 }
 
 @keyframes trans_menu_1 {
   0% {
-    transform: translateX(-500px);
+    transform: translateX(-870px);
   }
   100% {
     transform: translateX(0);

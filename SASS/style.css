@@ -5,6 +5,25 @@
     max-width: 1440px;
   }
 }
+@media (min-width: 634px) {
+  .main__container__menu .menu__container__background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__container__menu .menu__container__background .menu__container {
+    width: 634px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__container__menu .menu__container__background .menu__container .plat {
+    width: 100%;
+  }
+  .footer {
+    width: 100%;
+  }
+}
 @media (max-width: 780px) {
   .fonctionnement {
     padding: 48px 20px 68px 20px;
@@ -88,23 +107,34 @@
   .restaurants .restaurants__containner {
     width: 1080px;
   }
+  .bg__La_palette_du_gout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bg__La_palette_du_gout .menu__container__background {
+    width: 100%;
+  }
 }
 * {
   margin: 0;
   padding: 0;
 }
 
-body {
+.body__index {
   font-family: "Roboto";
+  flex-direction: column;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .main__container {
   position: absolute;
   top: 0;
   width: 100%;
-  animation: main__container linear 5000ms 1000ms both;
+  animation: main__container 2000ms linear 1000ms both;
+  background-color: white;
 }
 
 h2 {
@@ -254,44 +284,49 @@ a {
   border-radius: 15px;
   position: relative;
 }
+.restaurants .restaurants__cards a .card .card__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.restaurants .restaurants__cards a .card .card__content .card__txt {
+  padding: 16px 0 0 16px;
+}
+.restaurants .restaurants__cards a .card .card__content .card__txt .card__subtitle {
+  font-size: 1.063rem;
+  font-weight: 300;
+}
+.restaurants .restaurants__cards a .card .card__content .card__favorit {
+  display: flex;
+  justify-content: end;
+  height: 23px;
+  margin-top: 23px;
+  margin-right: 25px;
+}
+.restaurants .restaurants__cards a .card .card__content .card__favorit:hover .fa-regular {
+  animation: heart__empty 500ms ease-in-out 100ms both;
+}
+.restaurants .restaurants__cards a .card .card__content .card__favorit:hover .fa-solid {
+  animation: heart 500ms ease-in-out 100ms both;
+}
+.restaurants .restaurants__cards a .card .card__content .card__favorit .fa-regular {
+  font-size: 1.375rem;
+  position: absolute;
+}
+.restaurants .restaurants__cards a .card .card__content .card__favorit .fa-solid {
+  font-size: 1.375rem;
+  opacity: 0;
+  background: linear-gradient(345deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 .restaurants .restaurants__cards a .card img {
   width: 100%;
   height: 174px;
   border-radius: 15px 15px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.restaurants .restaurants__cards a .card .card__txt {
-  padding: 16px 0 0 16px;
-}
-.restaurants .restaurants__cards a .card .card__txt .card__subtitle {
-  font-size: 1.063rem;
-  font-weight: 300;
-}
-.restaurants .restaurants__cards a .card .card__favorit {
-  display: flex;
-  justify-content: end;
-  position: relative;
-  bottom: 33px;
-  right: 25px;
-}
-.restaurants .restaurants__cards a .card .card__favorit:hover .fa-regular {
-  animation: heart__empty 500ms ease-in-out 100ms both;
-}
-.restaurants .restaurants__cards a .card .card__favorit .fa-regular {
-  font-size: 1.375rem;
-  position: absolute;
-}
-.restaurants .restaurants__cards a .card .card__favorit .fa-solid {
-  font-size: 1.375rem;
-  opacity: 0;
-  background: linear-gradient(345deg, #9356DC -11.44%, #FF79DA 123.93%);
-}
-.restaurants .restaurants__cards a .card .card__favorit .fa-solid:hover {
-  animation: heart 1s ease-in-out 100ms both;
-}
-.restaurants .restaurants__cards a .card .card__favorit .fa-solid:hover .fa-regular {
-  animation: heart__empty 1s ease-in-out 100ms both;
 }
 .restaurants .restaurants__cards a .card .card__new__position {
   position: absolute;
@@ -317,6 +352,7 @@ a {
 
 footer {
   background-color: #353535;
+  max-width: 1440px;
 }
 footer .footer__logo .footer__logo__title {
   font-size: 18px;
@@ -368,7 +404,7 @@ footer .container__bas {
   border-radius: 50%;
   border: 7px solid transparent;
   border-top-color: #9356DC;
-  animation: spin 2s 3 linear 500ms;
+  animation: spin 2s 3 linear 250ms;
 }
 
 .loader::before, .loader::after {
@@ -384,7 +420,7 @@ footer .container__bas {
   right: 10px;
   bottom: 10px;
   border-top-color: #FF79DA;
-  animation: spin 3s 2 linear 500ms;
+  animation: spin 3s 2 linear 250ms;
 }
 
 .loader::after {
@@ -393,7 +429,7 @@ footer .container__bas {
   right: 28px;
   bottom: 28px;
   border-top-color: #99E2D0;
-  animation: spin 1.5s 3 linear 500ms;
+  animation: spin 1.5s 3 linear 250ms;
 }
 
 @keyframes spin {
@@ -415,21 +451,12 @@ footer .container__bas {
 @keyframes heart {
   0% {
     opacity: 0;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
   }
   50% {
     opacity: 0.5;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
   }
   100% {
     opacity: 1;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
   }
 }
 @keyframes heart__empty {

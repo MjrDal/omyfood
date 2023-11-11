@@ -3,6 +3,25 @@
     max-width: 1440px;
   }
 }
+@media (min-width: 634px) {
+  .main__container__menu .menu__container__background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__container__menu .menu__container__background .menu__container {
+    width: 634px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__container__menu .menu__container__background .menu__container .plat {
+    width: 100%;
+  }
+  .footer {
+    width: 100%;
+  }
+}
 @media (max-width: 780px) {
   .fonctionnement {
     padding: 48px 20px 68px 20px;
@@ -85,5 +104,13 @@
   }
   .restaurants .restaurants__containner {
     width: 1080px;
+  }
+  .bg__La_palette_du_gout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bg__La_palette_du_gout .menu__container__background {
+    width: 100%;
   }
 }/*# sourceMappingURL=responsive.css.map */
