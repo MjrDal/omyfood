@@ -112,10 +112,15 @@
             width: 1080px;
         }
     }
-    .bg__La_palette_du_gout{
+    .menu{
         display: flex;
         flex-direction: column;
         align-items: center;
+        .bg__La_palette_du_gout{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         .menu__container__background{
             width: 100%;
         }

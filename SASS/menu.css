@@ -108,12 +108,17 @@
   .restaurants .restaurants__containner {
     width: 1080px;
   }
-  .bg__La_palette_du_gout {
+  .menu {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .bg__La_palette_du_gout .menu__container__background {
+  .menu .bg__La_palette_du_gout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu .menu__container__background {
     width: 100%;
   }
 }
@@ -150,39 +155,48 @@
 }
 
 .bg__La_palette_du_gout {
-  background-image: url("../assets/Images et textes Ohmyfood/images/restaurants/N_Y88TWmGwA.svg");
-  background-size: 100% 290px;
-  background-position: top right 50%;
+  background-image: url("../assets/Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  max-width: 1440px;
+  height: 275px;
   width: 100%;
 }
 
 .bg__Le_delice_des_sens {
   background-image: url("../assets/Images et textes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  max-width: 1440px;
+  height: 275px;
   width: 100%;
 }
 
 .bg__La_note_enchantee {
   background-image: url("../assets/Images et textes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  max-width: 1440px;
+  height: 275px;
   width: 100%;
 }
 
 .bg__A_la_francaise {
   background-image: url("../assets/Images et textes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  max-width: 1440px;
+  height: 275px;
   width: 100%;
 }
 
-.menu {
-  padding-top: 220px;
-}
 .menu .menu__container__background {
   max-width: 1055px;
+  margin-top: -55px;
   background-color: #F6F6F6;
   border-radius: 40px 40px 0 0;
   padding: 32px 17px 40px 17px;
