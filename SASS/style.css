@@ -212,15 +212,13 @@ a {
   color: white;
   border: none;
   border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
   width: 218px;
   height: 50px;
   margin-top: 27px;
   transition: background-color 250ms;
   animation: btn_reset ease-in-out 1000ms forwards;
-}
-.exploration .exploration__restaurants .btn p {
-  font-size: 1rem;
-  font-weight: 500;
 }
 .exploration .exploration__restaurants .btn:hover {
   animation: btn_hover ease-in-out 1000ms forwards;
