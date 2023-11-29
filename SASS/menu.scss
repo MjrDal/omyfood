@@ -156,7 +156,7 @@
                             animation: trans_coche ease-in-out 500ms both;
                         }
                         &:hover .card__title{
-                            width: 60%;
+                            animation: trans_width ease-in-out 500ms both;
                         }
                         h4{
                             font-size: 1.1rem;
@@ -168,8 +168,9 @@
                             font-weight: 300;
                         }
                         .card__title{
-                            width: 100%;
+                            min-width: 100px;
                             margin: 15px 0 15px 15px;
+                            animation: trans_width_reverse ease-in-out 500ms both;
                             h4{
                                 width: 100%;
                                 overflow: hidden;
@@ -274,5 +275,25 @@
     }
     100%{
         transform: translateX(0px);
+    }
+}
+
+// animation du reduction du texte avec les 3 petitd points.
+
+@keyframes trans_width{
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+
+@keyframes trans_width_reverse{
+    0%{
+        width: 50%;
+    }
+    100%{
+        width: 100%;
     }
 }

@@ -299,7 +299,7 @@
   animation: trans_coche ease-in-out 500ms both;
 }
 .menu .menu__container__background .menu__container .plat .menu__cards .menu__card:hover .card__title {
-  width: 60%;
+  animation: trans_width ease-in-out 500ms both;
 }
 .menu .menu__container__background .menu__container .plat .menu__cards .menu__card h4 {
   font-size: 1.1rem;
@@ -311,8 +311,9 @@
   font-weight: 300;
 }
 .menu .menu__container__background .menu__container .plat .menu__cards .menu__card .card__title {
-  width: 100%;
+  min-width: 100px;
   margin: 15px 0 15px 15px;
+  animation: trans_width_reverse ease-in-out 500ms both;
 }
 .menu .menu__container__background .menu__container .plat .menu__cards .menu__card .card__title h4 {
   width: 100%;
@@ -435,5 +436,21 @@
   }
   100% {
     transform: translateX(0px);
+  }
+}
+@keyframes trans_width {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@keyframes trans_width_reverse {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
   }
 }/*# sourceMappingURL=menu.css.map */

@@ -1,10 +1,8 @@
+Présentation du projet:
 
+    contexte:
+    Ma mission est de développer un site “mobile first” qui répertorie les menus de restaurants gastronomiques. En plus des systèmes classiques de réservation, les clients pourront composer le menu de leur repas pour que les plats soient prêts à leur arrivée. Finis, les temps d'attente au restaurant !
 
-
-
-pour les bouton l'animation sur le background ce fait aussi sur le box shadow comme je l'ai mis sur la btn entier.
-
-Est ce que je peu mettre un :hover sur un btn:after qui à un background et faire l'animation comme ca.
-
-Pour le moment j'ai un pb l'image des menu
-
+    Livrable:
+    Cette version n'est pas totalement fonctionnelle. Elle permet de montrer les animations et le visuel du site dans sa partie finale.
+    
